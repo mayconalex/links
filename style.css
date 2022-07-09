@@ -146,11 +146,11 @@ footer p {
 
 footer p a {
     color: var(--main-color);
-    transition: opacity 400ms;
+    transition: text-shadow 400ms;
 }
 
 footer p a:hover {
-    opacity: 0.75;
+    text-shadow: 0 0 1rem var(--main-color);
 }
 
 footer p a:visited {
