@@ -67,6 +67,11 @@ header img {
     padding: 0.37rem;
     border: 0.4rem solid var(--main-color);
     border-radius: 50%;
+    transition: box-shadow 0.25s;
+}
+
+header img:hover {
+    box-shadow: 0 0 1.5rem var(--main-color);
 }
 
 header h1 {
@@ -146,7 +151,7 @@ footer p {
 
 footer p a {
     color: var(--main-color);
-    transition: text-shadow 400ms;
+    transition: text-shadow 0.25s;
 }
 
 footer p a:hover {
