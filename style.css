@@ -111,7 +111,7 @@ main a {
 }
 
 main a:hover {
-    opacity: 0.75;
+    box-shadow: 0 0 1.5rem var(--main-color);
 }
 
 main a:visited{
@@ -130,7 +130,7 @@ main ul li a {
 
     background-color: var(--main-color);
 
-    transition: opacity 400ms;
+    transition: box-shadow 0.25s;
 }
 
 
