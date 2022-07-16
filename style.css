@@ -20,10 +20,10 @@
     --bg-color: #09091E; /* Default: #09091E */
     --text-color: #ECF0F1; /* Default: #ECF0F1 */
 
-    --bubble-1-color: #4fc3dc;
-    --bubble-1-color-aura: #4fc3dc44;
-    --bubble-2-color: #ff2d75;
-    --bubble-2-color-aura: #ff2d7544;
+    --bubble-1-color: #F25D30; /* Default: #4FC3DC */
+    --bubble-1-color-aura: #F25D3044; /* Default: #4FC3DC44 */
+    --bubble-2-color: #48C1F7; /* Default: #FF2D75 */
+    --bubble-2-color-aura: #48C1F744; /* Default: #FF2D7544 */
 }
 
 body {
