@@ -19,9 +19,15 @@
     --main-color: #00FA9A; /* Default: #00FA9A */
     --bg-color: #09091E; /* Default: #09091E */
     --text-color: #ECF0F1; /* Default: #ECF0F1 */
+
+    --bubble-1-color: #4fc3dc;
+    --bubble-1-color-aura: #4fc3dc44;
+    --bubble-2-color: #ff2d75;
+    --bubble-2-color-aura: #ff2d7544;
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Rubik', sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -48,10 +54,54 @@ header, footer {
 
 
 
+/* ===== BACKGROUND =============== */
+.background {
+    position: fixed;
+    z-index: -100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: var(--bubble-1-color);
+    margin: 0 0.4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1rem var(--bubble-1-color-aura), 0 0 5rem var(--bubble-1-color), 0 0 10rem var(--bubble-1-color);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: var(--bubble-2-color);
+    box-shadow: 0 0 0 1rem var(--bubble-2-color-aura), 0 0 5rem var(--bubble-2-color), 0 0 10rem var(--bubble-2-color);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+
 /* ===== CONTAINER =============== */
 .container {
     width: 30rem;
-    margin: 4rem auto;
+    margin: auto;
+    padding-block: 4rem;
     text-align: center;
 }
 
