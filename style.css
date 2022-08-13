@@ -138,6 +138,10 @@ header p {
     opacity: 0.75;
 }
 
+header p svg {
+    width: .5rem;
+}
+
 
 
 /* ===== MAIN =============== */
