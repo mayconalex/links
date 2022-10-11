@@ -118,9 +118,11 @@ header img {
     border: 0.4rem solid var(--main-color);
     border-radius: 50%;
     transition: box-shadow 0.25s;
+    transition: transform 0.25s;
 }
 
 header img:hover {
+    transform: scale(1.1);
     box-shadow: 0 0 1.5rem var(--main-color);
 }
 
