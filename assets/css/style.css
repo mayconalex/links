@@ -16,14 +16,14 @@
 :root {
     font-size: 62.5%;
 
-    --main-color: #338AF3; /* Default: #00FA9A */
+    --main-color: #4FC3DC; /* Default: #00FA9A */
     --bg-color: #09091E;   /* Default: #09091E */
     --text-color: #ECF0F1; /* Default: #ECF0F1 */
 
-    --bubble-1-color: #F7DD43;        /* Default: #4FC3DC / #F25D30 */
-    --bubble-1-color-aura: #F7DD4344; /* Default: #4FC3DC44 / #F25D3044 */
-    --bubble-2-color: #047C3F;        /* Default: #FF2D75 / #48C1F7 */
-    --bubble-2-color-aura: #047C3F44; /* Default: #FF2D7544 / #48C1F744 */
+    --bubble-1-color: #4FC3DC;        /* Default: #4FC3DC / #F25D30 */
+    --bubble-1-color-aura: #4FC3DC44; /* Default: #4FC3DC44 / #F25D3044 */
+    --bubble-2-color: #FF2D75;        /* Default: #FF2D75 / #48C1F7 */
+    --bubble-2-color-aura: #FF2D7544; /* Default: #FF2D7544 / #48C1F744 */
 }
 
 body {
