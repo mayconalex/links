@@ -1,0 +1,234 @@
+/* [Font] Rubik (300-400-700) */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+/* [Font] Roboto Mono (400) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ===== GLOBAL =============== */
+:root {
+    font-size: 62.5%;
+
+    --main-color: #338AF3; /* Default: #00FA9A */
+    --bg-color: #09091E;   /* Default: #09091E */
+    --text-color: #ECF0F1; /* Default: #ECF0F1 */
+
+    --bubble-1-color: #F7DD43;        /* Default: #4FC3DC / #F25D30 */
+    --bubble-1-color-aura: #F7DD4344; /* Default: #4FC3DC44 / #F25D3044 */
+    --bubble-2-color: #047C3F;        /* Default: #FF2D75 / #48C1F7 */
+    --bubble-2-color-aura: #047C3F44; /* Default: #FF2D7544 / #48C1F744 */
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .container, header, main, footer {
+    border: 1px solid red;
+} */
+
+header, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ===== BACKGROUND =============== */
+.background {
+    position: fixed;
+    z-index: -100;
+    /* width: 100%; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: var(--bubble-1-color);
+    margin: 0 0.4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1rem var(--bubble-1-color-aura), 0 0 5rem var(--bubble-1-color), 0 0 10rem var(--bubble-1-color);
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: var(--bubble-2-color);
+    box-shadow: 0 0 0 1rem var(--bubble-2-color-aura), 0 0 5rem var(--bubble-2-color), 0 0 10rem var(--bubble-2-color);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+
+
+/* ===== CONTAINER =============== */
+.container {
+    width: 30rem;
+    margin: auto;
+    padding-block: 4rem;
+    text-align: center;
+}
+
+
+
+/* ===== HEADER =============== */
+header {
+    margin-bottom: 4.8rem;
+}
+
+header img {
+    width: 10rem;
+    padding: 0.37rem;
+    border: 0.4rem solid var(--main-color);
+    border-radius: 50%;
+    transition: box-shadow 0.25s;
+    transition: transform 0.25s;
+}
+
+header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+header h1 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.8rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+header p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+header p svg {
+    width: .5rem;
+}
+
+
+
+/* ===== MAIN =============== */
+main {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+main svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+main svg path {
+    fill: var(--bg-color);
+}
+
+main a {
+	color: var(--bg-color);
+}
+
+main a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+main a:visited{
+    color: var(--bg-color);
+}
+
+main ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    padding: 1.6rem;
+
+    border-radius: 0.6rem;
+
+    background-color: var(--main-color);
+
+    transition: box-shadow 0.25s;
+    transition: transform 0.25s;
+}
+
+
+
+/* ===== FOOTER =============== */
+footer {
+    margin-top: 4.8rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer p a {
+    color: var(--main-color);
+    transition: text-shadow 0.25s;
+}
+
+footer p a:hover {
+    text-shadow: 0 0 1rem var(--main-color);
+}
+
+footer p a:visited {
+    color: var(--main-color);
+}
+
+footer p svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+footer p svg:nth-child(2) {
+    margin-inline: 0.3rem;
+}
+
+footer p svg path {
+    fill: var(--main-color);
+}
