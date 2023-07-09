@@ -114,8 +114,6 @@ header {
 
 header img {
     width: 10rem;
-    padding: 0.37rem;
-    border: 0.4rem solid var(--main-color);
     border-radius: 50%;
     transition: box-shadow 0.25s;
     transition: transform 0.25s;
@@ -123,7 +121,6 @@ header img {
 
 header img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1.5rem var(--main-color);
 }
 
 header h1 {
@@ -164,20 +161,19 @@ main svg {
 }
 
 main svg path {
-    fill: var(--bg-color);
+    fill: var(--text-color);
 }
 
 main a {
-	color: var(--bg-color);
+	color: var(--text-color);
 }
 
 main a:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1rem var(--main-color);
 }
 
 main a:visited{
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 main ul li a {
@@ -188,9 +184,10 @@ main ul li a {
 
     padding: 1.6rem;
 
-    border-radius: 0.6rem;
+    border-radius: 999px;
 
-    background-color: var(--main-color);
+    box-shadow: 0 .8rem .4rem 0 rgba(0, 0, 0, 0.05), 0 .1rem .1rem 0 rgba(255, 255, 255, 0.30) inset, 0px -1px 1px 0px rgba(255, 255, 255, 0.10) inset;
+    backdrop-filter: blur(10px);
 
     transition: box-shadow 0.25s;
     transition: transform 0.25s;
